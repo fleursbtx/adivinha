@@ -1,4 +1,4 @@
-var numeroSecreto = parseInt(Math.random() * 50);
+var numeroSecreto = parseInt(Math.random() * 100);
 var botaoChute = document.getElementById("chutar");
 var botaoJogar = document.getElementById("jogar");
 var valor = document.getElementById("valor");
@@ -19,11 +19,12 @@ function Chutar() {
     botaoJogar.style.display = 'block';
     secao.style.gap = '0';
 
-  } else if (chute > 50 || chute < 0) {
+  } else if (chute > 100 || chute < 0) {
     window.alert("Valor Inválido! Você deve digitar um número de 0 a 50");
   } else if(chute > numeroSecreto){
     resultado.innerHTML = "Que pena, você errou, o número secreto é menor que " + chute + ". Tente novamente!";
   } else {
     resultado.innerHTML = "Que pena, você errou, o número secreto é maior que " + chute + ". Tente novamente!";
   }
+
 }
